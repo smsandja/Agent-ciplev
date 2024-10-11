@@ -9,14 +9,14 @@ function getLocalDB(){
 
 //fonction de mise a jour de la DB
 function updateDB(db){
-    localStorage.setItem(db, JSON.stringify([]))
+    localStorage.setItem(AGENTDB, JSON.stringify(db))
 }
 
 //fonction d'ajout d'un agent
 
 function createAgent(agent){
     const db = getLocalDB()
-    agent.id = date.now() + ""
+    agent.id = Date.now()+""
     db.push(agent)
     updateDB(db)
 
@@ -70,4 +70,12 @@ function searchAgentByName(name){
     })
 
     return filteredDb
+}
+function checkIfAgentExist(nom, prenom){
+    const db = getLocalDB()
+    const filteredDb = db.filter((data)=>{
+        return data.nom.toLowerCase() == nom.toLowerCase() && data.prenom.toLowerCase() == prenom.toLowerCase()
+    })
+
+    return filteredDb.length > 0
 }

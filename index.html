@@ -136,13 +136,13 @@
                                
                                 <tbody>
                                     <tr >
-                                          <td class="text-center"> Test </td>
-                                          <td class="text-center">Test </td>
-                                          <td class="text-center">Test</td>
-                                          <td class="text-center">Test</td>
-                                          <td class="text-center">Test</td>
-                                          <td class="text-center">Test</td>
-                                          <td class="text-center">Test</td>
+                                          <td class="text-center">{{ newAgent.nom }}</td>
+                                          <td class="text-center">{{ newAgent.prenom }}</td>
+                                          <td class="text-center">{{ newAgent.dateNaissance }}</td>
+                                          <td class="text-center">{{ newAgent.specialite }}</td>
+                                          <td class="text-center">{{ newAgent.canton }}</td>
+                                          <td class="text-center">{{ newAgent.service }}</td>
+                                          <td class="text-center">{{ newAgent.contact }}</td>
                                           <td class="text-center">
                                               <button class="btn btn-link"><i class="fas fa-edit"></i></button>
                                               <button class="btn btn-link"><i class="fas fa-trash"></i></button>
@@ -158,8 +158,9 @@
         </main>
     </div>
       
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.2/sweetalert2.all.js" integrity="sha512-gW2eZ0iTJ22hGX2QrmyJxrcl9VKb014VbLTB7inuCPApYbWmcHogVgRjzh0fgUNmWmd8Z6RgGNZTe8rMenhuAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>     
+        
         <script src="js/api.js"></script>  
         <script src="js/app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
