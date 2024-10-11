@@ -6,14 +6,15 @@ const App = {
             showHome : false,
             createAgent : false,
             showList: false,
-            agent: {
+            newAgent: {
                 nom: "",
                 prenom: "",
                 dateNaissance: "",
                 specialite: "",
                 canton: "",
-                service: "",
-                contact: 
+                 contact: "",
+                 service: ""
+               
             }
         }
     },
@@ -29,6 +30,9 @@ const App = {
         },
         showListPage() {
             this.showNavigationState("List")
+        },
+        submitAgent(){
+            console.log(this.newAgent)
         },
         
         showNavigationState(destination){
